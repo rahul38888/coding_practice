@@ -8,7 +8,6 @@ def lex_largest_k_consecutive(str, k):
     i, j = 25, 25
     result = ""
     while i >= 0 and j >= 0:
-        cur = i
         if j == i:
             if char_count[i] > k:
                 result += chr(i+ord('a'))*k
