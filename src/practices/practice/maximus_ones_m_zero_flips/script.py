@@ -1,5 +1,4 @@
-# User function Template for python3
-
+# https://practice.geeksforgeeks.org/problems/maximize-number-of-1s0905/1#
 
 # m is maximum of number zeroes allowed
 # to flip, n is size of array
