@@ -18,7 +18,7 @@ class Solution:
         for i in range(1,N+1):
             if i%2!=0:
                 i_char_count *= (K - (i-1)//2)
-        result = (result+i_char_count)%(1000000007)
+        result = (result+i_char_count) % 1000000007
         return result
 
 
