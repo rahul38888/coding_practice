@@ -13,7 +13,7 @@ class Solution:
         return True
 
     def rec(self, matrix, i, j, cur_str):
-        print(i, j)
+        # print(i, j)
         if i == len(matrix[0])-1 and j == len(matrix)-1:
             return int(self.palindrom(cur_str + matrix[j][i]))
 
@@ -27,7 +27,7 @@ class Solution:
         return count
 
     def countOfPalindromicPaths(self, matrix):
-        print(matrix)
+        # print(matrix)
         return self.rec(matrix, 0, 0, "")
 
 
