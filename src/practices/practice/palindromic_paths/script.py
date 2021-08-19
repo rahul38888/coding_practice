@@ -3,32 +3,50 @@
 # at each node recursively call itself and at bottom,left cornet determine it its a palindrome
 
 class Solution:
-    def palindrom(self ,string):
-        i, j = 0 ,len(string)-1
-        while i< j:
-            if string[i] != string[j]:
-                return False
-            i+=1
-            j-=1
-        return True
 
-    def rec(self, matrix, i, j, cur_str):
-        # print(i, j)
-        if i == len(matrix[0])-1 and j == len(matrix)-1:
-            return int(self.palindrom(cur_str + matrix[j][i]))
+    def rec(self, matrix, it, jt, ib, jb, cache):
+        if it > ib or jt > jb:
+            cache[(it, jt, ib, jb)] = 0
+            return 0
 
-        count = 0
-        if i + 1 < len(matrix[0]):
-            count += self.rec(matrix, i + 1, j, cur_str + matrix[j][i])
+        if matrix[it][jt] != matrix[ib][jb]:
+            cache[(it, jt, ib, jb)] = 0
+            return 0
 
-        if j + 1 < len(matrix):
-            count += self.rec(matrix, i, j + 1, cur_str + matrix[j][i])
+
+        if abs(it - ib) + abs(jt - jb) < 2:
+            cache[(it, jt, ib, jb)] = 1
+            return 1
+
+        coun1, count2, count3, count4 = 0,0,0,0
+        if cache.__contains__((it+1, jt, ib-1, jb)):
+            count1 = cache[(it+1, jt, ib-1, jb)]
+        else:
+            count1 = self.rec(matrix, it+1, jt, ib-1, jb, cache)
+
+        if cache.__contains__((it+1, jt, ib, jb-1)):
+            count2 = cache[(it+1, jt, ib, jb-1)]
+        else:
+            count2 = self.rec(matrix, it+1, jt, ib, jb-1, cache)
+
+        if cache.__contains__((it, jt+1, ib-1, jb)):
+            count3 = cache[(it, jt+1, ib-1, jb)]
+        else:
+            count3 = self.rec(matrix, it, jt+1, ib-1, jb, cache)
+
+        if cache.__contains__((it, jt+1, ib, jb-1)):
+            count4 = cache[(it, jt+1, ib, jb-1)]
+        else:
+            count4 = self.rec(matrix, it, jt+1, ib, jb-1, cache)
+
+        count = count1+count2+count3+count4
+
+        cache[(it, jt, ib, jb)] = count
 
         return count
 
     def countOfPalindromicPaths(self, matrix):
-        # print(matrix)
-        return self.rec(matrix, 0, 0, "")
+        return self.rec(matrix, 0, 0, len(matrix)-1, len(matrix[0])-1, {})
 
 
 if __name__ == '__main__':
