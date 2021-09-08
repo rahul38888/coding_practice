@@ -6,10 +6,10 @@
 # if sum < N add next element
 # iterate over these steps until largest number become N
 
-# Another approach is by realising that to that be the case for N
+# Another approach is by realising that to be the case for N
 # N should be equal to a + (a+1) + ..... (a+L) or L+1 consecutive numbers
 # which can be solved to L(L+1)/2 + a(L+1)
-# starting with L = 1, try to func a
+# starting with L = 1, try to find a
 # if a is integer, result_count+=1
 # run this on loop while increasing L, until a < 1
 
