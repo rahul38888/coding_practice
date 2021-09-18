@@ -7,7 +7,7 @@
 
 class Solution:
     def querySum(self, n, arr, q, queries):
-        sums = [0 for i in range(n + 1)]
+        sums = [0 for _ in range(n + 1)]
         for i in range(1, n + 1):
             sums[i] = sums[i - 1] + arr[i - 1]
 
