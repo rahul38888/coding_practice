@@ -1,0 +1,5 @@
+# chatterbot
+pytz==2023.3.post1
+websockets==12.0
+flask-socketio
+flask==3.0.0
