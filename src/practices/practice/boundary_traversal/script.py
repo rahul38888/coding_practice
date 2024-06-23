@@ -1,5 +1,7 @@
 # https://practice.geeksforgeeks.org/problems/boundary-traversal-of-binary-tree/1
 
+# Blog: https://thebendu.atlassian.net/wiki/external/YTUyZTA5ZTM2ODA2NDM5OTk4NzJkYmE3MWQzNDViZDI
+
 class Node:
     def __init__(self, val):
         self.right = None
