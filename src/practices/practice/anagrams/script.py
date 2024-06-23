@@ -1,5 +1,7 @@
 # https://practice.geeksforgeeks.org/problems/print-anagrams-together/1
 
+# Blog: https://thebendu.atlassian.net/wiki/external/ZDk4OTIyZmFjMTM3NGM4ZWEwZjg2ODIwYmM4MTU1NmU
+
 def merge(word, s, m, e):
     l = list(word)
     i = s
@@ -32,27 +34,23 @@ def sortString(word, s, e):
 
 
 def Anagrams(words, n):
-    sorted_words = [0] * n
-    for i in range(n):
-        sorted_words[i] = sortString(words[i], 0, len(words[i]) - 1)
-
     groups_map = {}
     for i in range(n):
-        if not groups_map.__contains__(sorted_words[i]):
-            groups_map[sorted_words[i]] = []
-        groups_map.get(sorted_words[i]).append(words[i])
+        sorted_word = sortString(words[i], 0, len(words[i]) - 1)
+        if not groups_map.__contains__(sorted_word):
+            groups_map[sorted_word] = []
+        groups_map.get(sorted_word).append(words[i])
+
     return groups_map.values()
 
 
 if __name__ == '__main__':
-    t = int(input())
-    for tcs in range(t):
-        n = int(input())
-        words = input().split()
+    n = int(input())
+    words = input().split()
 
-        ans = Anagrams(words, n)
+    ans = Anagrams(words, n)
 
-        for grp in sorted(ans):
-            for word in grp:
-                print(word, end=' ')
-            print()
+    for grp in sorted(ans):
+        for word in grp:
+            print(word, end=' ')
+        print()

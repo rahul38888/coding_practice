@@ -1,6 +1,6 @@
 # https://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/
 
-# approach is to use (a*b)%m = (a%m*b%m)%m recursively by deciding n by 2 and solving for that
+# approach is to use (a*b)%m = (a%m*b%m)%m recursively by deviding n by 2 and solving for that
 
 class Solution:
     def PowMod(self, x, n, m):
