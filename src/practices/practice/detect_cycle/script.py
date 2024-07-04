@@ -1,30 +1,41 @@
 # https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1
 
 class Solution:
-    def traverse(self, V, adj, visited, v):
+    def dfs_loop(self, v: int, adj: list, visited: list, path_stack: dict) -> bool:
+        path_stack[v] = True
         visited[v] = True
-        for i in adj[v]:
-            if visited[i]:
-                return 1, visited
-            status, visited = self.traverse(V, adj, visited, i)
-            if status:
-                return 1, visited
-        return 0, visited
+        for v2 in adj[v]:
+            if not visited[v2]:
+                if self.dfs_loop(v2, adj, visited, path_stack):
+                    return True
+            
+            elif path_stack.__contains__(v2) and path_stack[v2]:
+                return True
+            
+        del path_stack[v]
+        return False
 
-    def isCyclic(self, V, adj):
+
+    def isCyclic(self, V: int, adj: dict):
         visited = [False for i in range(V)]
-        for i in range(V):
-            if len(adj[i]) > 0:
-                status, visited = self.traverse(V, adj, visited, i)
-                return status
-
+        for v in range(V):
+            if visited[v]:
+                continue
+            
+            if self.dfs_loop(v, adj, visited, dict()):
+                return True
+        
+        return False
+            
+            
 import sys
 
-sys.setrecursionlimit(10 ** 6)
+sys.setrecursionlimit(10**6)
 
 if __name__ == '__main__':
     t = int(input())
     for i in range(t):
+        _ = input()
         V, E = list(map(int, input().strip().split()))
         adj = [[] for i in range(V)]
         for i in range(E):

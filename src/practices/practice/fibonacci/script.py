@@ -30,9 +30,9 @@ if __name__ == '__main__':
     result = None
 
     start = time.time()
-    result = recursive(n)
+    result = tabulation(n)
     end = time.time()
-    print("Recursive output: " + str(result) + ", time taken: " + str(end - start))
+    print("Tabulation output: " + str(result) + ", time taken: " + str(end - start))
 
     memory = [None] * (n + 1)
     start = time.time()
@@ -41,6 +41,6 @@ if __name__ == '__main__':
     print("Memorization output: " + str(result) + ", time taken: " + str(end - start))
 
     start = time.time()
-    result = tabulation(n)
+    result = recursive(n)
     end = time.time()
-    print("Tabulation output: " + str(result) + ", time taken: " + str(end - start))
+    print("Recursive output: " + str(result) + ", time taken: " + str(end - start))

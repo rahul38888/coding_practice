@@ -5,19 +5,22 @@
 
 class Solution:
     def tour(self, lis, n):
-        sum = 0
-        j = 0
+        k = 0
+        sum_from_k = 0
+        sum_pre_k = 0
         for i in range(len(lis)):
-            pair = lis[i]
-            sum += pair[0]-pair[1]
-            if sum < 0:
-                sum = 0
-                j = i+1
-
-        if j>=n:
-            return -1
+            p = lis[i][0]
+            d = lis[i][1]
+            sum_from_k += (p - d)
+            if sum_from_k < 0:
+                sum_pre_k += sum_from_k 
+                sum_from_k = 0
+                k = i + 1
+            
+        if sum_pre_k + sum_from_k >= 0:
+            return k
         else:
-            return j
+            return -1 
 
 if __name__ == '__main__':
     t = int(input())

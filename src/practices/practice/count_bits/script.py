@@ -31,8 +31,25 @@ class Solution:
 
         return count
 
+class Solution2:
+    def countSetBits(self, n):
+        count = 0
+        group_size = 2
+        num = n
+        while num:
+            n_full_groups = (n + 1)//group_size
+            rem_par = (n + 1) % group_size
+            new_ones = n_full_groups*(group_size/2) + max(0, rem_par - (group_size/2))
+            count += new_ones
+
+            group_size *= 2
+            num = num // 2
+        return int(count)
+
 
 if __name__ == "__main__":
     for _ in range(int(input())):
+        N = int(input())
         ob = Solution()
-        print(ob.countSetBits(int(input())))
+        ob2 = Solution2()
+        print(f"{N} : {ob.countSetBits(N)} : {ob2.countSetBits(N)}")

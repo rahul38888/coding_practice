@@ -1,15 +1,11 @@
 # https://practice.geeksforgeeks.org/problems/diameter-of-binary-tree/1
 
 class Solution:
-    def dimensions(self, root):
+    def calculate_dimensions(self, root):
         if not root:
             return 0, 0
-        dia_r, longest_hand_r = 0, 0
-        dia_l, longest_hand_l = 0, 0
-        if root.right:
-            dia_r, longest_hand_r = self.dimensions(root.right)
-        if root.left:
-            dia_l, longest_hand_l = self.dimensions(root.left)
+        dia_r, longest_hand_r = self.calculate_dimensions(root.right)
+        dia_l, longest_hand_l = self.calculate_dimensions(root.left)
 
         dia = max(dia_l, dia_r, longest_hand_r + longest_hand_l + 1)
         longest_hand = max(longest_hand_l, longest_hand_r) + 1
@@ -17,7 +13,7 @@ class Solution:
         return dia, longest_hand
 
     def diameter(self, root):
-        dia, l = self.dimensions(root)
+        dia, _ = self.calculate_dimensions(root)
         return dia
 
 

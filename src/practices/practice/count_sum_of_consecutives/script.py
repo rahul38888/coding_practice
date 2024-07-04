@@ -30,16 +30,19 @@ class Solution:
                 sm+=1
 
         return result_count
-
+    
     def getCount(self, N):
-        L = 1
-        a = 1.75
+        L = 2
+        a = None
         result_count = 0
-        while a >= 1:
+        while True:
+            a = N/L - (L-1)/2
+            if a < 1:
+                break
+
             if a == int(a):
                 result_count+=1
 
-            a = (N - L*(L+1)/2)/(L+1)
             L+=1
 
         return result_count
@@ -51,4 +54,4 @@ if __name__ == '__main__':
         N=int(input())
 
         ob = Solution()
-        print(ob.getCount(N))
+        print(N, ob.getCount2(N), ob.getCount(N))

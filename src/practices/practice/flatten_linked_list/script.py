@@ -1,6 +1,19 @@
 # https://practice.geeksforgeeks.org/problems/flattening-a-linked-list/1
 
-def findMinimum(root):
+class Node:
+    def __init__(self, d):
+        self.data = d
+        self.next = None
+        self.bottom = None
+
+    def __str__(self):
+        str = ""
+        while self is not None:
+            str += self.data + "- "
+        node = self.bottom
+        return str
+
+def findMinimum(root: Node):
     min_prev, min = None, root
     cur_prev, cur = None, root
     while cur is not None:
@@ -37,20 +50,6 @@ def flatten(root):
             min_prev.next = None
 
     return result
-
-
-class Node:
-    def __init__(self, d):
-        self.data = d
-        self.next = None
-        self.bottom = None
-
-    def __str__(self):
-        str = ""
-        while self is not None:
-            str += self.data + "- "
-        node = self.bottom
-        return str
 
 
 def printList(node):
