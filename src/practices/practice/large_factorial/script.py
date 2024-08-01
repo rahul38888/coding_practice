@@ -1,29 +1,29 @@
 # Link: https://practice.geeksforgeeks.org/problems/large-factorial4721/1
 
 
-def large_factorial(a, n):
-    maxVal = a[0]
-    for i in range(1,n):
-        if a[i] > maxVal:
-            maxVal = a[i]
+def large_factorial(arr, length):
+    maxVal = arr[0]
+    for j in range(1, length):
+        if arr[j] > maxVal:
+            maxVal = arr[j]
 
-    f_cache = [1,1]
-    for i in range(2, maxVal+1):
-        f_cache.append((f_cache[i-1]*i)% 1000000007)
+    f_cache = [1, 1]
+    for j in range(2, maxVal + 1):
+        f_cache.append((f_cache[j - 1] * j) % 1000000007)
 
     f_result = []
-    for val in a:
+    for val in arr:
         f_result.append(f_cache[val])
 
     return f_result
 
 
-def large_factorial_mine(a):
+def large_factorial_mine(arr):
     f_array = []
     f_cache = [1, 1]
     f = 1
-    for val in a:
-        if val > len(f_cache)-1:
+    for val in arr:
+        if val > len(f_cache) - 1:
             for i in range(len(f_cache), val + 1):
                 f *= i
                 f_cache.append(f)
@@ -46,4 +46,4 @@ if __name__ == '__main__':
     for i in range(t):
         a, n = scan_input()
         # print(" ".join(list(map(str, large_factorial_mine(a)))))
-        print(" ".join(list(map(str, large_factorial(a,n)))))
+        print(" ".join(list(map(str, large_factorial(a, n)))))
