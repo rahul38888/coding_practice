@@ -26,7 +26,7 @@ class MinHeap:
     def upHeap(self, i):
         if len(self.heap) <= 0:
             return
-        while i is not 0 and self.heap[self.getParent(i)] > self.heap[i]:
+        while i != 0 and self.heap[self.getParent(i)] > self.heap[i]:
             self.heap[i], self.heap[self.getParent(i)] = self.heap[self.getParent(i)], self.heap[i]
             i = self.getParent(i)
 
@@ -38,7 +38,7 @@ class MinHeap:
     # new_val < self.heap[i]
     def deceaseKey(self, i, new_val):
         if len(self.heap) <= 0:
-            return None
+            return
         self.heap[i] = new_val
         self.upHeap(i)
 
