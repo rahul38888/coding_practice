@@ -1,3 +1,11 @@
+# https://www.geeksforgeeks.org/problems/generate-all-possible-parentheses/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card
+#
+# Observations:
+#   - A intermediate string with opening brackets more than n cannot become a valid result
+#   - In a valid intermediate stage closing brackets should always be less than or equal to opening bracket
+#   - If we are maintaining these 2 things, then when closing bracket count becomes n,
+#       the result would be a valid result
+
 class Solution:
 
     def allParenthesis(self, string: str, n: int, open_count: int, close_count: int, result: list):
@@ -12,8 +20,8 @@ class Solution:
             return result
 
     def AllParenthesis(self, n):
-        result = self.allParenthesis("", n, 0, 0, [])
-        return result
+        results = self.allParenthesis("", n, 0, 0, [])
+        return results
 
 
 if __name__ == "__main__":
@@ -21,7 +29,7 @@ if __name__ == "__main__":
     for i in range(0, t):
         n = int(input())
         ob = Solution()
-        result = ob
+        result = ob.AllParenthesis(n)
         result.sort()
         for i in range(0, len(result)):
             print(result[i])
