@@ -1,11 +1,11 @@
 # https://www.geeksforgeeks.org/largest-lexicographical-string-with-at-most-k-consecutive-elements/
 #
 # Observations:
-#   - We can keep only k characters together
-#   - We have to introduce different character just smaller than the current
-#       after k characters in case the count of the character is more than k
-#   -
-
+#   - By definition we can keep only k characters together
+#   - So if a character A has more than `k` characters in input
+#       - We will have to introduce different character just smaller than A, after k A's
+#       - After that we can introduce more of A`s
+#
 
 def lex_largest_k_consecutive(string: str, k_value):
     char_count = [0] * 26
