@@ -1,11 +1,18 @@
+#
 # Link: https://practice.geeksforgeeks.org/problems/large-factorial4721/1
+#
+# Observations:
+#   - We should know that mod(n*m) = mod(mod(n)*mod(m))
+#   - Now in calculation of mod(factorial(N)) we will also calculate mod(factorial(N-1), mod(factorial(N-2),
+#           ..., mod(factorial(1). So its a ood idea to cache these, to be reused by numbers less than N
+#   - Lets calculate mod(factorial(N) of largest number, others can be fetched from cache
+#
 
 
 def large_factorial(arr, length):
     maxVal = arr[0]
     for j in range(1, length):
-        if arr[j] > maxVal:
-            maxVal = arr[j]
+        maxVal = max(maxVal, arr[j])
 
     f_cache = [1, 1]
     for j in range(2, maxVal + 1):
@@ -18,32 +25,15 @@ def large_factorial(arr, length):
     return f_result
 
 
-def large_factorial_mine(arr):
-    f_array = []
-    f_cache = [1, 1]
-    f = 1
-    for val in arr:
-        if val > len(f_cache) - 1:
-            for i in range(len(f_cache), val + 1):
-                f *= i
-                f_cache.append(f)
-            f_array.append(f % 1000000007)
-        else:
-            f_array.append(f_cache[val] % 1000000007)
-
-    return f_array
-
-
 def scan_input():
-    n = int(input())
-    nsstr = input()
-    a = list(map(lambda x: int(x), nsstr.split()))
-    return a, n
+    n_value = int(input())
+    ns_str = input()
+    a_value = list(map(lambda x: int(x), ns_str.split()))
+    return a_value, n_value
 
 
 if __name__ == '__main__':
     t = int(input())
     for i in range(t):
         a, n = scan_input()
-        # print(" ".join(list(map(str, large_factorial_mine(a)))))
         print(" ".join(list(map(str, large_factorial(a, n)))))
