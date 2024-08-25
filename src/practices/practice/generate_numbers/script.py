@@ -1,7 +1,7 @@
 # https://www.geeksforgeeks.org/batch/gts-1/track/gts-mathematics/problem/generating-numbers
 
 # For given N, we hav to find N numbers that satisfy the following equation
-#     2^i * 3^i * 5^k * 7^l       Where i,j,k,l are non negative integers
+#     2^i * 3^i * 5^k_value * 7^l       Where i,j,k_value,l are non negative integers
 
 # Approach: 
 #     The approch is to start with number 1 as curent number.

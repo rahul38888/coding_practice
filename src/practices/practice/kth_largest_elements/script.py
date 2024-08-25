@@ -7,7 +7,7 @@ class Solution:
 
         Observations
         ------------
-        Simplest solution can be to sort the array using a performant working algorithm and fetch the k largest elements
+        Simplest solution can be to sort the array using a performant working algorithm and fetch the k_value largest elements
         But this will take us O(n log(n)) time.
 
         We can use
@@ -16,7 +16,7 @@ class Solution:
 
         Solution
         ---------
-        Start adding each element to a min-heap. If heap size goes above k pop min element
+        Start adding each element to a min-heap. If heap size goes above k_value pop min element
             Exit when there is no element to put into arr left
 
         From heap pop all elements one by one into an array. Return that array in reverse order

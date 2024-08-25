@@ -14,10 +14,10 @@ class Solution:
         --------
         Our aim is to partition the arrays such that no element of arr1 is larger than any element of arr2
 
-        - To find that keep 2 pointers, 1 per array pointing to starting index innitially (i, j). Also keep another pointer to end of arr1 (k)
+        - To find that keep 2 pointers, 1 per array pointing to starting index innitially (i, j). Also keep another pointer to end of arr1 (k_value)
         - In a loop move arr1 pointer to next if its value is less than value pointed by arr2 pointer.
-        - If not, swap arr2 pointing value with value pointed by k. This is the point we were looking for. Move arr2 pointer to next and k backward
-        - Do this untill i and k cross each other of j runs its course
+        - If not, swap arr2 pointing value with value pointed by k_value. This is the point we were looking for. Move arr2 pointer to next and k_value backward
+        - Do this untill i and k_value cross each other of j runs its course
         - After that sort both arrays and we are done
 
     '''

@@ -2,7 +2,7 @@
 
 # Recusive calls
 # start with 1
-# find a greatest 1,2,4,8...k (k<=m), count = 1
+# find a greatest 1,2,4,8...k_value (k_value<=m), count = 1
 # revert back to last 2^p and increase it by 1 and try to find a string again
 # if not possible return
 # if there it count +=1, repeate step 3

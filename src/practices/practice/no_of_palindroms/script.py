@@ -1,13 +1,13 @@
 # https://practice.geeksforgeeks.org/problems/number-of-palindromic-strings2706/1#
 
-# For 1 character string = k
-# For 2 character string = k
-# For 3 character string = k(k-1)
-# For 4 character string = k(k-1)
-# For 5 character string = k(k-1)(k-2)
-# For N characters string count = k(k-1)...(k - (N-1)//2)
+# For 1 character string = k_value
+# For 2 character string = k_value
+# For 3 character string = k_value(k_value-1)
+# For 4 character string = k_value(k_value-1)
+# For 5 character string = k_value(k_value-1)(k_value-2)
+# For N characters string count = k_value(k_value-1)...(k_value - (N-1)//2)
 
-# start with icc = K and k = 0
+# start with icc = K and k_value = 0
 # for in 1,...,N
 # calculate palindromes using above method
 
