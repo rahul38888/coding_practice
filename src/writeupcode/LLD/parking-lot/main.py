@@ -120,8 +120,6 @@ class Singleton(type):
 
 class ParkingLot(metaclass=Singleton):
     def __init__(self, entries: int, exists: int):
-        self.__entries = entries
-        self.__exists = exists
         self.__entry_gates = ThreadPool(processes=entries)
         self.__exit_gates = ThreadPool(processes=exists)
         self.__levels: list[Level] = list()
