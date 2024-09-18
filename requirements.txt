@@ -6,3 +6,8 @@ flask==3.0.0
 selenium~=4.22.0
 pygame~=2.6.0
 click~=8.1.7
+openai-whisper
+gradio
+scipy
+numpy
+pandas
