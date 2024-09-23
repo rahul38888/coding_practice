@@ -16,3 +16,4 @@ langchain-openai
 langserve[all]
 sse_starlette
 langchain_community
+nltk
