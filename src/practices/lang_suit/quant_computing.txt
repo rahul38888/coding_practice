@@ -1,0 +1,97 @@
+# What is Quantum computing?
+Quantum computing is a multidisciplinary field comprising aspects of computer science, physics, and mathematics that utilizes quantum mechanics to solve complex problems faster than on classical computers. The field of quantum computing includes hardware research and application development. Quantum computers are able to solve certain types of problems faster than classical computers by taking advantage of quantum mechanical effects, such as superposition and quantum interference. Some applications where quantum computers can provide such a speed boost include machine learning (ML), optimization, and simulation of physical systems. Eventual use cases could be portfolio optimization in finance or the simulation of chemical systems, solving problems that are currently impossible for even the most powerful supercomputers on the market.
+
+# What is the quantum computing advantage?
+Currently, no quantum computer can perform a useful task faster, cheaper, or more efficiently than a classical computer. Quantum advantage is the threshold where we have built a quantum system that can perform operations that the best possible classical computer cannot simulate in any kind of reasonable time.
+
+# What is quantum mechanics?
+Quantum mechanics is the area of physics that studies the behavior of particles at a microscopic level. At subatomic levels, the equations that describe how particles behave is different from those that describe the macroscopic world around us. Quantum computers take advantage of these behaviors to perform computations in a completely new way.
+
+# What is a qubit?
+Quantum bits, or qubits, are represented by quantum particles. The manipulation of qubits by control devices is at the core of a quantum computer's processing power. Qubits in quantum computers are analogous to bits in classical computers. At its core, a classical machine's processor does all its work by manipulating bits. Similarly, the quantum processor does all its work by processing qubits.
+
+# How are qubits different from classical bits?
+In classical computing, a bit is an electronic signal that is either on or off. The value of the classical bit can thus be one (on) or zero (off). However, because the qubit is based on the laws of quantum mechanics it can be placed in a superposition of states.
+
+# What are the principles of quantum computing?
+A quantum computer works using quantum principles. Quantum principles require a new dictionary of terms to be fully understood, terms that include superposition, entanglement, and decoherence. Let's understand these principles below.
+
+# Superposition
+Superposition states that, much like waves in classical physics, you can add two or more quantum states and the result will be another valid quantum state. Conversely, you can also represent every quantum state as a sum of two or more other distinct states. This superposition of qubits gives quantum computers their inherent parallelism, allowing them to process millions of operations simultaneously.
+
+# Entanglement
+Quantum entanglement occurs when two systems link so closely that knowledge about one gives you immediate knowledge about the other, no matter how far apart they are. Quantum processors can draw conclusions about one particle by measuring another one. For example, they can determine that if one qubit spins upward, the other will always spin downward, and vice versa. Quantum entanglement allows quantum computers to solve complex problems faster.
+
+When a quantum state is measured, the wavefunction collapses and you measure the state as either a zero or a one. In this known or deterministic state, the qubit acts as a classical bit. Entanglement is the ability of qubits to correlate their state with other qubits.
+
+# Decoherence
+Decoherence is the loss of the quantum state in a qubit. Environmental factors, like radiation, can cause the quantum state of the qubits to collapse. A large engineering challenge in constructing a quantum computer is designing the various features that attempt to delay decoherence of the state, such as building specialty structures that shield the qubits from external fields.
+
+# What are the components of a quantum computer?
+Quantum computers have hardware and software, similar to a classical computer.
+
+# Quantum hardware
+Quantum hardware has three main components.
+
+# Quantum data plane
+The quantum data plane is the core of the quantum computer and includes the physical qubits and the structures required to hold them in place.
+
+# Control and measurement plane
+The control and measurement plane converts digital signals into analog or wave control signals. These analog signals perform the operations on the qubits in the quantum data plane.
+
+# Control processor plane and host processor
+The control processor plane implements the quantum algorithm or sequence of operations. The host processor interacts with the quantum software and provides a digital signal or classical bits sequence to the control and measurement plane.
+
+# Quantum software
+Quantum software implements unique quantum algorithms using quantum circuits. A quantum circuit is a computing routine that defines a series of logical quantum operations on the underlying qubits. Developers can use various software development tools and libraries to code quantum algorithms.
+
+# What are the types of quantum technology?
+No one has shown the best way to build a fault-tolerant quantum computer, and multiple companies and research groups are investigating different types of qubits. We give a brief example of some of these qubit technologies below.
+
+# Gate-based ion trap processors
+A gate-based quantum computer is a device that takes input data and transforms it according to a predefined unitary operation. The operation is typically represented by a quantum circuit and is analogous to gate operations in traditional electronics. However, quantum gates are totally different from electronic gates.
+
+Trapped ion quantum computers implement qubits using electronic states of charged atoms called ions. The ions are confined and suspended above the microfabricated trap using electromagnetic fields. Trapped-ion based systems apply quantum gates using lasers to manipulate the electronic state of the ion.  Trapped ion qubits use atoms that come from nature, rather than manufacturing the qubits synthetically.
+
+# Gate-based superconducting processors
+Superconductivity is a set of physical properties that you can observe in certain materials like mercury and helium at very low temperatures. In these materials, you can observe a characteristic critical temperature below which electrical resistance is zero and magnetic flux fields are expelled. An electric current through a loop of superconducting wire can persist indefinitely with no power source.
+
+Superconducting quantum computing is an implementation of a quantum computer in superconducting electronic circuits. Superconducting qubits are built with superconducting electric circuits that operate at cryogenic temperatures.
+
+# Photonic processors
+A quantum photonic processor is a device that manipulates light for computations. Photonic quantum computers use quantum light sources that emit squeezed-light pulses, with qubit equivalents that correspond to modes of a continuous operator, such as position or momentum.
+
+# Neutral atom processors
+Neutral atom qubit technology is similar to trapped ion technology. However, it uses light instead of electromagnetic forces to trap the qubit and hold it in position. The atoms are not charged and the circuits can operate at room temperatures
+
+# Rydberg atom processors
+A Rydberg atom is an excited atom with one or more electrons that are further away from the nucleus, on average. Rydberg atoms have a number of peculiar properties including an exaggerated response to electric and magnetic fields, and long life. When used as qubits, they offer strong and controllable atomic interactions that you can tune by selecting different states.
+
+# Quantum annealers
+Quantum annealing uses a physical process to place a quantum system's qubits in an absolute energy minimum. From there, the hardware gently alters the system's configuration so that its energy landscape reflects the problem that needs to be solved. The advantage of quantum annealers is that the number of qubits can be much larger than those available in a gate-based system. However, their use is limited to specific cases only.
+
+# How do companies use quantum computing?
+Quantum computing can revolutionize industries. We give some example use cases below:
+
+# ML
+Machine learning (ML) is the process of analyzing vast quantities of data to help computers make better predictions and decisions. Research in quantum computing studies the physical limits of information processing and is breaking new ground in fundamental physics. This research leads to advances in many fields of science and industry, such as chemistry, optimization, and molecular simulation. It is also a growing area of interest for financial services to predict market movements and for manufacturing to improve operations.
+
+# Optimization
+Quantum computing can improve research and development, supply-chain optimization, and production. For example, you could apply quantum computing to decrease manufacturing process–related costs and shorten cycle times by optimizing elements such as path planning in complex processes. Another application is the quantum optimization of loan portfolios so that lenders can free up capital, lower interest rates, and improve their offerings.
+
+# Simulation
+The computational effort required to simulate systems accurately scales exponentially with the complexity of drug molecules and materials. Even using approximation methods, current supercomputers cannot achieve the level of accuracy that these simulations demand. Quantum computation has the potential to solve some of the most challenging computational problems faced in chemistry, allowing the scientific community to do chemical simulations that are intractable today. For example, Pasqal built their QUBEC computational software to run chemistry simulations. QUBEC automates the heavy lifting necessary to run quantum computational tasks from automatic provisioning of the computing infrastructure to running pre- and post-processing classical calculations and performing error mitigation tasks.
+
+# How can you get started with quantum computing?
+If you want to try quantum computing, you can get started with a quantum hardware emulator on your local machine. Emulators are regular software that imitates quantum behavior on a classical computer. They are predictable and allow you to see quantum states. They are useful if you want to test your algorithms before investing in quantum hardware time. However, they cannot recreate real quantum behavior.
+
+You can also use a cloud quantum computing service to code on a true quantum computer without investing in expensive hardware.
+
+# How can AWS help with quantum computing?
+Amazon Braket is a fully managed quantum computing service. It is designed to help speed up scientific research and software development for quantum computing. You can use Amazon Braket to do these tasks:
+
+Work with different types of quantum computers and circuit simulators using a consistent set of development tools.
+Build quantum projects on a trusted cloud with straightforward pricing and management controls for both quantum and classical technology.
+Innovate quickly with expert guidance and tech support, or collaborate with consultants in the Amazon Quantum Solutions Lab.
+Push the boundaries of quantum hardware research with access to trapped ion, superconducting, photonic, and annealing devices.
+Get started with quantum computing by creating an AWS account today.

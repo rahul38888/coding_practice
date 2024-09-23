@@ -18,3 +18,6 @@ sse_starlette
 langchain_community
 nltk
 gensim
+langchain-chroma
+langchain-mongodb
+pymongo
