@@ -21,3 +21,5 @@ gensim
 langchain-chroma
 langchain-mongodb
 pymongo
+pinecone
+langchain-pinecone
