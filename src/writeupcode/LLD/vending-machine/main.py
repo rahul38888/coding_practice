@@ -1,6 +1,3 @@
-import collections
-
-
 class Product:
     def __init__(self, name: str, price: int):
         self.__name = name
@@ -69,7 +66,7 @@ class VendingMachine:
     def __init__(self, max_space: int):
         self.__max__space = max_space
         self.__stock: list[Product] = list()
-        self.__money: collections[int: int] = dict()
+        self.__money: dict[int: int] = dict()
 
     def stock_report(self):
         pass
