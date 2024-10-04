@@ -23,3 +23,5 @@ langchain-mongodb
 pymongo
 pinecone
 langchain-pinecone
+transformers==4.38.2
+tiktoken

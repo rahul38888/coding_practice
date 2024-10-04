@@ -24,14 +24,18 @@ class Human(LivingBeing):
         tax = 10 * years
         try:
             self.spend(tax, "taxes")
-        except NotAllowed:
+        except NotAllowed as e:
             self.spend(min(tax, self.__money), "taxes")
             print("Warning not enough money to pay taxes")
+        else:
+            print("Unknown exception")
+        finally:
+            print("Done with transaction")
 
 
 if __name__ == '__main__':
     """
-    Overriden methods will have different behaviour
+    Override methods will have different behaviour
     """
     ron = Human("Ron", 22, 100)
     ron.age_by_years(5)

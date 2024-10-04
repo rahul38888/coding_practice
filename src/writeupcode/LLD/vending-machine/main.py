@@ -1,3 +1,4 @@
+import collections
 
 
 class Product:
@@ -47,12 +48,14 @@ class Transaction:
     def get_product(self) -> Product:
         return self._product
 
+
 class PurchaseInput(Transaction):
     def __init__(self, product: Product, money: dict[int: int]):
         super().__init__(product, money)
 
     def get_money(self) -> dict[int: int]:
         return self._money
+
 
 class PurchaseOutput(Transaction):
     def __init__(self, product: Product, change: dict[int: int]):

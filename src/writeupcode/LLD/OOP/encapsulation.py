@@ -11,7 +11,7 @@ class LivingBeing:
             Provides only info it wants to
         """
         self.__age += years
-        print(f"{self.__name} is now {self.__age} years old") \
+        print(f"{self.__name} is now {self.__age} years old")
 
     def name(self) -> str:
         return self.__name
