@@ -3,19 +3,19 @@
 #
 # Observations:
 #   - We should know that mod(n*m) = mod(mod(n)*mod(m))
-#   - Now in calculation of mod(factorial(N)) we will also calculate mod(factorial(N-1), mod(factorial(N-2),
-#           ..., mod(factorial(1). So its a ood idea to cache these, to be reused by numbers less than N
-#   - Lets calculate mod(factorial(N) of largest number, others can be fetched from cache
-#
+#   - Now in calculation of mod(factorial(N)) we will also calculate
+#       mod(factorial(N-1), mod(factorial(N-2), ..., mod(factorial(1).
+#       So its a ood idea to cache these, to be reused by numbers less than N
+#   - Lets calculate mod(factorial(N)) of largest #, others are in cache
 
 
 def large_factorial(arr, length):
-    maxVal = arr[0]
+    max_val = arr[0]
     for j in range(1, length):
-        maxVal = max(maxVal, arr[j])
+        max_val = max(max_val, arr[j])
 
     f_cache = [1, 1]
-    for j in range(2, maxVal + 1):
+    for j in range(2, max_val + 1):
         f_cache.append((f_cache[j - 1] * j) % 1000000007)
 
     f_result = []

@@ -1,9 +1,12 @@
 # https://practice.geeksforgeeks.org/problems/longest-consecutive-subsequence2449/1#
 #
 # Observations:
-#   - Note that there can be multiple subsets of different size which are consecutive in themselves
-#   - If smallest element of such subset is X, then X-1 would not exist in the array
-#   - If largest element of such subset is Y, then Y+1 would also not exist in the array
+#   - Note that there can be multiple subsets of different size which are
+#       consecutive in themselves
+#   - If smallest element of such subset is X, then X-1 would not
+#       exist in the array
+#   - If largest element of such subset is Y, then Y+1 would also not
+#       exist in the array
 #   - Using second point we can identify the smallest element of such subsets
 #   - After that we can keep finding the next element and keep count
 #   - We will stop if the next consecutive element is not present in the array
