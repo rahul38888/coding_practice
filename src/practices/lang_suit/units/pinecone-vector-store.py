@@ -49,8 +49,9 @@ if __name__ == '__main__':
     # update_data()
     query = "How is Rahul?"
     q_vec = embedder.embed_query(query)
-    response = index.query(namespace="test-ns", vector= q_vec, top_k=3, include_values=True,
-                           include_metadata=True, filter={"entity": {"$eq": "person"}})
+    response = index.query(namespace="test-ns", vector= q_vec, top_k=3,
+                           include_values=True, include_metadata=True,
+                           filter={"entity": {"$eq": "person"}})
 
     print(response)
 

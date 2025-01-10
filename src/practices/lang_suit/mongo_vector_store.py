@@ -16,38 +16,44 @@ collection = client["vector_db"]["vector_collection"]
 
 
 vector_store = MongoDBAtlasVectorSearch(
-    collection=collection, embedding=embedding, index_name="vector_search_index", relevance_score_fn="cosine"
-)
+    collection=collection, embedding=embedding,
+    index_name="vector_search_index", relevance_score_fn="cosine")
 
 
 def put_vector_data():
     document_1 = Document(
-        page_content="I had chocalate chip pancakes and scrambled eggs for breakfast this morning.",
+        page_content="I had chocalate chip pancakes and scrambled eggs for "
+                     "breakfast this morning.",
         metadata={"source": "tweet"},
     )
 
     document_2 = Document(
-        page_content="The weather forecast for tomorrow is cloudy and overcast, with a high of 62 degrees.",
+        page_content="The weather forecast for tomorrow is cloudy and "
+                     "overcast, with a high of 62 degrees.",
         metadata={"source": "news"},
     )
 
     document_3 = Document(
-        page_content="Building an exciting new project with LangChain - come check it out!",
+        page_content="Building an exciting new project with LangChain - come "
+                     "check it out!",
         metadata={"source": "tweet"},
     )
 
     document_4 = Document(
-        page_content="Robbers broke into the city bank and stole $1 million in cash.",
+        page_content="Robbers broke into the city bank and stole $1 million "
+                     "in cash.",
         metadata={"source": "news"},
     )
 
     document_5 = Document(
-        page_content="Wow! That was an amazing movie. I can't wait to see it again.",
+        page_content="Wow! That was an amazing movie. I can't wait to see "
+                     "it again.",
         metadata={"source": "tweet"},
     )
 
     document_6 = Document(
-        page_content="Is the new iPhone worth the price? Read this review to find out.",
+        page_content="Is the new iPhone worth the price? Read this review "
+                     "to find out.",
         metadata={"source": "website"},
     )
 
@@ -57,12 +63,14 @@ def put_vector_data():
     )
 
     document_8 = Document(
-        page_content="LangGraph is the best framework for building stateful, agentic applications!",
+        page_content="LangGraph is the best framework for building stateful, "
+                     "agentic applications!",
         metadata={"source": "tweet"},
     )
 
     document_9 = Document(
-        page_content="The stock market is down 500 points today due to fears of a recession.",
+        page_content="The stock market is down 500 points today due to "
+                     "fears of a recession.",
         metadata={"source": "news"},
     )
 
