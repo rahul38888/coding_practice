@@ -10,10 +10,10 @@ nltk.download('wordnet')
 
 class LemmatizationComponent(Component):
     display_name = "Lemmatization"
-    description = "Lemmatize a list of text"
+    description = "Lemmatize text"
     documentation: str = "http://docs.langflow.org/components/custom"
-    icon = "code"
-    name = "CustomComponent"
+    icon = "FolderSync"
+    name = "LemmatizationComponent"
     wnl = WordNetLemmatizer()
 
     inputs = [
@@ -28,10 +28,12 @@ class LemmatizationComponent(Component):
     ]
 
     outputs = [
-        Output(display_name="Output", name="output", method="build_output"),
+        Output(display_name="Data", name="data", method="build_output"),
     ]
 
     def build_output(self) -> Data:
+        print(f"Print: {type(self.input_values)}, {self.input_values}")
+        self.log(f"Log: {type(self.input_values)}, {self.input_values}", "LemmatizationComponent")
         data_list = self.input_values if self.input_values else []
 
         for data in data_list:

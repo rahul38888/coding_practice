@@ -61,7 +61,7 @@ if __name__ == '__main__':
     print(f"Vocabulary: {len(vocab)} - {vocab}")
     print("--------------------------------")
 
-    # Bad of words
+    # Bag of words
     bag = dict()
     for s in tokens:
         for t in s:
